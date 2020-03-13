@@ -1,0 +1,53 @@
+spring:
+  datasource:
+    data-studb:
+      url: jdbc:mysql://localhost:3306/studb?useSSL=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+    data-test1:
+      url: jdbc:mysql://localhost:3306/test1?useSSL=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      filters: stat,wall
+      initial-size: 5
+      max-active: 30
+      min-idle: 5
+      max-wait: 600000
+      validation-query: select 1
+      validation-query-timeout: 3000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      stat-view-servlet:
+        allow: '*'
+        url-pattern: /druid/*
+        login-username: admin
+        login-password: admin
+      filter:
+        wall:
+          config:
+            metadata-allow: false
+          log-violation: true
+          throw-exception: true
+        stat:
+          log-slow-sql: true
+      web-stat-filter:
+        enabled: true
+        url-pattern: /*
+        exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+        session-stat-enable: true
+        session-stat-max-count: 10000
+        profile-enable: true
+  jpa:
+    hibernate:
+      studb-dialect: org.hibernate.dialect.MySQL5Dialect
+      test1-dialect: org.hibernate.dialect.SQLServer2008Dialect
+    open-in-view: true
+    show-sql: true
