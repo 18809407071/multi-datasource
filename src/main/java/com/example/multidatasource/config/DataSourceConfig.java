@@ -11,7 +11,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import javax.sql.DataSource;
 
 /**
- * @ClassName StudbJpaConfig
+ * @ClassName DataSourceConfig
  * @Description TODO 数据源配置及jdbcTempt配置
  * @Author caoti
  * @Date 2020/3/13 15:44

@@ -21,7 +21,7 @@ import javax.sql.DataSource;
 import java.util.Map;
 
 /**
- * @ClassName Test1JpaConfig
+ * @ClassName StudbJpaConfig
  * @Description TODO studb数据库jpa配置
  * @Author caoti
  * @Date 2020/3/13 16:00
