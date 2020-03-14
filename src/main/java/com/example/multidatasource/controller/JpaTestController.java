@@ -1,7 +1,3 @@
-/**
- * Copyright (c) 2020, 中电万维公司 All rights reserved.
- * 中电万维公司 专有/保密源代码,未经许可禁止任何人通过任何渠道使用、修改源代码.
- */
 package com.example.multidatasource.controller;
 
 import com.example.multidatasource.entity.studbEntity.Student;
